@@ -33,4 +33,16 @@ describe Person do
       expect(@lady_maria.instance_variable_get(:@equipment)).to eq nil
     end
   end
+
+  context "when exp is 100 and leveled_up method is called" do
+    before(:each) do
+      @lady_maria.experience = 100
+      @lady_maria.leveled_up?
+    end
+    it "should change the player level and update attributes" do
+      expect(@lady_maria.experience).to eq 0
+      expect(@lady_maria.health).to eq 60
+      expect(@lady_maria.level).to eq 2
+    end
+  end
 end
