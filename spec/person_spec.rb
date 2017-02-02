@@ -21,7 +21,16 @@ describe Person do
       @lady_maria.set_equipment(@noob_sword)
     end
     it "should equip the new sword" do
-      expect(@lady_maria.equipment).to eq 1
+      expect(@lady_maria.equipment).to eq "noob_sword"
+    end
+  end
+
+  context "when removing sword" do
+    before(:each) do
+      @lady_maria.remove_equipment
+    end
+    it "equipment should be nil" do
+      expect(@lady_maria.instance_variable_get(:@equipment)).to eq nil
     end
   end
 end

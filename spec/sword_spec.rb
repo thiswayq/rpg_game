@@ -6,7 +6,6 @@ describe Sword do
   end
 
   it "should create a sword" do
-    expect(@muramasa.id).to eq 1
     expect(@muramasa.name).to eq "Muramasa"
     expect(@muramasa.power).to eq 10
   end
@@ -20,6 +19,15 @@ describe Sword do
     end
     it "should update power" do
       expect(@muramasa.power).to eq 14
+    end
+  end
+
+  context "when sword has negative power" do
+    before(:each) do
+      @muramasa.power = -1
+    end
+    it "power should be negative as normal" do
+      expect(@muramasa.power).to eq -1
     end
   end
 end

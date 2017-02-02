@@ -12,7 +12,7 @@ class Person
   end
 
   def set_equipment(sword)
-    @equipment = sword.id
+    @equipment = sword.name
   end
 
   def remove_equipment

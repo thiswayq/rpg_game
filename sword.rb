@@ -1,11 +1,7 @@
 class Sword
-  attr_accessor :id, :name, :power, :refine_level
-
-  @@swords_createds = 0
+  attr_accessor :name, :power, :refine_level
 
   def initialize(name, power)
-    @@swords_createds += 1
-    @id = @@swords_createds
     @name = name
     @power = power
     @refine_level = 1
