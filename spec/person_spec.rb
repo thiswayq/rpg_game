@@ -1,5 +1,5 @@
-require_relative "../person"
-require_relative "../sword"
+require_relative "../classes/person"
+require_relative "../classes/sword"
 
 describe Person do
   before(:each) do
