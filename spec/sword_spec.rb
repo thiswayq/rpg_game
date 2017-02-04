@@ -1,4 +1,4 @@
-require_relative '../classes/sword'
+require_relative '../lib/sword'
 
 describe Sword do
   before(:each) do
